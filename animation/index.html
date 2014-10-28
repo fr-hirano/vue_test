@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>vue test</title>
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
+    <style>
+      .msg { font-size: 30px; display: inline-block }
+      .msg.v-enter { animation: fadein .5s; -webkit-animation: fadein .5s }
+      .msg.v-leave { animation: fadeout .5s; -webkit-animation: fadeout .5s }
+      @keyframes fadein {
+        0% { transform: scale(0); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(1); }
+      }
+      @keyframes fadeout {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.5); }
+        100% { transform: scale(0); }
+      }
+      @-webkit-keyframes fadein {
+        0% { -webkit-transform: scale(0); }
+        50% { -webkit-transform: scale(1.5); }
+        100% { -webkit-transform: scale(1); }
+      }
+      @-webkit-keyframes fadeout {
+        0% { -webkit-transform: scale(1); }
+        50% { -webkit-transform: scale(1.5); }
+        100% { -webkit-transform: scale(0); }
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="vm.foo= vm.foo? false : true">toggle</button>
+    <div id="sample">
+      <span class="msg" v-if="foo" v-animation>Hello!</span>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
