@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>frs_view</title>
+    <meta charset="UTF-8">
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/vue/0.10.6/vue.min.js"></script>
+    <script type='text/javascript' src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <h1>frs_view</h1>
+    <div id="sample">
+      <form action="#" method="post">
+        作業時間:<label><input type="range" name="range" list="data1" min="0" max="60" step="10" value="20"></label><br>
+        <datalist id="data1">
+          <option value="0"></option>
+          <option value="10"></option>
+          <option value="20"></option>
+          <option value="30"></option>
+          <option value="40"></option>
+          <option value="50"></option>
+          <option value="60"></option>
+        </datalist>
+        <button type="button" class="btn btn-default" v-on="click:increment">increment</button>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
